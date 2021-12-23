@@ -1,0 +1,9 @@
+<div>{{ question.text }}</div>
+<div *ngIf="question.answers" class="answers-list-padding">
+  <ul class="list-group answers">
+    <li (click)="onAnswerSelect(answer)"
+        *ngFor="let answer of question.answers" [class.active]="answer === selectedAnswer" class="list-group-item">
+      {{ answer.text }}
+    </li>
+  </ul>
+</div>

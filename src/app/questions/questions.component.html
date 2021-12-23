@@ -1,0 +1,15 @@
+<div class="container center">
+  <div *ngIf="name">
+    <h3>Привет, {{ name }}</h3>
+    <div *ngIf="errorVideo">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen frameborder="0" height="315"
+              [src]="errorVideo | safe"
+              title="YouTube video player"
+              width="560"></iframe>
+    </div>
+    <div *ngIf="currentQuestion">
+      <app-question (answerEmitter)="updateCurrentAnswer($event)" [question]="currentQuestion"></app-question>
+      <button (click)="loadNextQuestion()" block="true" class="my-4" color="elegant" mdbBtn>Дальше</button>
+    </div>
+  </div>
+</div>
