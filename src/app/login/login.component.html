@@ -1,9 +1,11 @@
 <div class="container center">
   <div class="text-center border border-light p-5">
+    <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+      {{errorMessage}}
+    </div>
+    <p class="h4 mb-4 text-background-color">Здравствуйте, введите, пожалуйста, свой пароль</p>
+    <input [(ngModel)]="password" class="form-control mb-4" placeholder="Пароль сюда" type="password">
 
-    <p class="h4 mb-4">Здравствуйте, введите, пожалуйста, свой пароль</p>
-    <input [(ngModel)]="password" type="password" class="form-control mb-4" placeholder="Пароль сюда">
-
-    <button mdbBtn (click)="login()" color="elegant" block="true" class="my-4">Зайти, но не выйти</button>
+    <button (click)="login()" block="true" class="my-4" color="elegant" mdbBtn>Зайти, но не выйти</button>
   </div>
 </div>

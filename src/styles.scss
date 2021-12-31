@@ -10,14 +10,16 @@ body, html {
 }
 
 .bg {
-  /* The image used */
   background-image: url("/assets/background.png");
+  background-repeat: repeat-y;
+  background-size: 100% 100vh;
+}
 
-  /* Full height */
-  height: 100%;
+.text-background-color {
+  background-color: white;
+}
 
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.components-padding-bottom {
+  padding-top: 200px;
+  padding-bottom: 200px
 }

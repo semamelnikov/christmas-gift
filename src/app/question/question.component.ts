@@ -19,7 +19,6 @@ export class QuestionComponent implements OnInit {
 
   onAnswerSelect(answer: Answer) {
     this.selectedAnswer = answer;
-    console.log(this.selectedAnswer);
     this.answerEmitter.emit(this.selectedAnswer.index);
   }
 }

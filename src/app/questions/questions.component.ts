@@ -42,6 +42,7 @@ export class QuestionsComponent implements OnInit {
         this.currentAnswerIndex = -1;
         this.errorVideo = '';
       } else {
+        this.userService.saveUserAnswers();
         this.router.navigate(['/final']);
       }
     } else {

@@ -1,6 +1,6 @@
 <div class="container center">
   <div *ngIf="name">
-    <h3>Привет, {{ name }}</h3>
+    <h3 class="text-background-color">Привет, {{ name }}</h3>
     <div *ngIf="errorVideo">
       <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen frameborder="0" height="315"
               [src]="errorVideo | safe"
