@@ -1,4 +1,4 @@
-<div>{{ question.text }}</div>
+<div><span class="text-background-color">{{ question.text }}</span></div>
 <div *ngIf="question.answers" class="answers-list-padding">
   <ul class="list-group answers">
     <li (click)="onAnswerSelect(answer)"

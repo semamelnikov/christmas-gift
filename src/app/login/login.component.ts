@@ -20,15 +20,14 @@ export class LoginComponent {
     if (this.password) {
       this.userService.login({name: '', password: this.password, city: null}).subscribe(
         (user: User) => {
-          console.log(user);
           this.userService.saveUserToken(user);
           this.userService.saveUserName(user);
           this.userService.saveUserCity(user);
           this.router.navigate(['/questions']);
         },
-        _ => this.errorMessage = 'Incorrect login or password');
+        _ => this.errorMessage = 'Пароль введен неправильно!');
     } else {
-      this.errorMessage = 'All fields are required';
+      this.errorMessage = 'Введите пароль, пожалуйста!';
     }
   }
 }
